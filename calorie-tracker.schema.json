@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/calorie-tracker.schema.json",
+  "title": "CalorieTracker",
+  "description": "A calorie tracker containing a list of days, each with logged food items.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the calorie tracker (e.g. the user's name or the tracker's label)."
+    },
+    "days": {
+      "type": "array",
+      "description": "Each day of tracked food, generated as new information is sent.",
+      "items": { "$ref": "#/$defs/day" }
+    }
+  },
+  "required": ["name", "days"],
+  "additionalProperties": false,
+  "$defs": {
+    "day": {
+      "type": "object",
+      "title": "Day",
+      "description": "A single day, parent to the food items logged on that day.",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "The date this entry covers, in YYYY-MM-DD format."
+        },
+        "items": {
+          "type": "array",
+          "description": "Food items logged for this day.",
+          "items": { "$ref": "#/$defs/foodItem" }
+        }
+      },
+      "required": ["date", "items"],
+      "additionalProperties": false
+    },
+    "foodItem": {
+      "type": "object",
+      "title": "FoodItem",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the food item."
+        },
+        "protein": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Protein in grams."
+        },
+        "carbs": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Carbohydrates in grams."
+        },
+        "fats": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Fats in grams."
+        },
+        "calories": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Calories in kcal."
+        }
+      },
+      "required": ["name", "protein", "carbs", "fats", "calories"],
+      "additionalProperties": false
+    }
+  }
+}

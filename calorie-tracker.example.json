@@ -1,0 +1,24 @@
+{
+  "name": "Alexandre's Calorie Tracker",
+  "days": [
+    {
+      "date": "2026-07-21",
+      "items": [
+        {
+          "name": "Grilled Chicken Breast",
+          "protein": 31,
+          "carbs": 0,
+          "fats": 3.6,
+          "calories": 165
+        },
+        {
+          "name": "Brown Rice",
+          "protein": 2.6,
+          "carbs": 23,
+          "fats": 0.9,
+          "calories": 112
+        }
+      ]
+    }
+  ]
+}
