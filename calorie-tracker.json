@@ -1,4 +1,17 @@
 {
   "name": "Alexandre's Calorie Tracker",
-  "days": []
+  "days": [
+    {
+      "date": "2026-07-21",
+      "items": [
+        {
+          "name": "Arroz, tipo 1, cru",
+          "protein": 7.2,
+          "carbs": 78.8,
+          "fats": 0.3,
+          "calories": 357.8
+        }
+      ]
+    }
+  ]
 }
