@@ -3,5 +3,20 @@
     "query": "raw rice",
     "taco_id": 4,
     "taco_name": "Arroz, tipo 1, cru"
+  },
+  "pao trigo frances": {
+    "query": "pao trigo frances",
+    "taco_id": 53,
+    "taco_name": "Pão, trigo, francês"
+  },
+  "ovo galinha inteiro cozido": {
+    "query": "ovo galinha inteiro cozido",
+    "taco_id": 488,
+    "taco_name": "Ovo, de galinha, inteiro, cozido/10minutos"
+  },
+  "pao de queijo assado": {
+    "query": "pao de queijo assado",
+    "taco_id": 140,
+    "taco_name": "Pão, de queijo, assado"
   }
 }
